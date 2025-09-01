@@ -1,0 +1,851 @@
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    
+  }
+  .admin-header {
+  position: relative; /* normal flow */
+  box-shadow: none;   /* optional, since shadow isn’t needed if not floating */
+}
+
+
+  .top-bar {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: flex; /* show button */
+    cursor: pointer;
+  }
+
+  .left-panel {
+    width: 250px;
+    height: 100%;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    right: -100%; /* hidden initially (off-screen right) */
+    transition: right 0.4s ease-in-out;
+    z-index: 998;
+  }
+
+  .left-panel.open {
+    right: 0; /* slide in from right */
+    position: fixed;   /* already set in mobile CSS */
+  z-index: 2000;
+  }
+
+  .right-panel {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-panel {
+    padding: 10px;
+  }
+
+  .left-panel h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .left-panel ul li {
+    margin: 5px 0;
+  }
+
+  .left-panel ul li a {
+    padding: 8px 10px;
+    font-size: 0.9em;
+  }
+
+  .left-panel ul li a i {
+    margin-right: 5px;
+  }
+}
+
+
+/* Small devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .header-column {
+    padding: 5px 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.3em;
+  }
+
+  .search-section {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+}
+
+/* Small devices (max-width: 576px) */
+@media (max-width: 576px) {
+  .admin-header {
+    flex-wrap: wrap;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.4em;
+  }
+}
+
+/* Medium devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .admin-header {
+    padding: 10px 15px;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.5em;
+  }
+
+  .search-section {
+    flex-grow: unset;
+    width: 70%;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+}
+
+/* Large devices (max-width: 992px) */
+@media (max-width: 992px) {
+  .welcome-section h2 {
+    font-size: 1.6em;
+  }
+
+  .search-section {
+    width: 95%;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+}
+
+/* Responsive Fix: Between 769px and 860px */
+@media (min-width: 769px) and (max-width: 860px) {
+  .admin-header {
+    flex-wrap: wrap; /* Allow items to wrap instead of squeezing */
+    padding: 10px 15px;
+  }
+
+  .header-column {
+    flex: 1; /* allow flexible growth */
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  /* Welcome section centered on its row */
+  .welcome-section {
+    width: 100%;
+    text-align: center;
+    order: 2; /* comes after notif/profile */
+    margin-top: 8px;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.5em;
+  }
+
+  /* Search section full width below welcome */
+  .search-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    order: 3; /* push search below welcome */
+    margin-top: 10px;
+  }
+
+  .search-box {
+    max-width: 100%;
+    width: 90%;
+  }
+
+  /* Notification left */
+  .notification-section {
+    justify-content: flex-start;
+    order: 1;
+  }
+
+  /* Profile right */
+  .profile-section {
+    justify-content: flex-end;
+    order: 1; /* same row as notif */
+  }
+}
+
+/* ------------------------------ dashboard section----------------------- */
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Small devices (Mobile: up to 600px) */
+@media (max-width: 600px) {
+  /* Dashboard Cards */
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .card-icon {
+    font-size: 1.5em;
+  }
+
+  .card-number {
+    font-size: 1.2em;
+  }
+
+  /* Analytics Sections */
+  .analytics-sections {
+    grid-template-columns: 1fr;
+  }
+
+  /* Chat Section */
+  .chat-messages {
+    max-height: 200px;
+  }
+
+  .chat-input-area {
+    flex-direction: column;
+  }
+
+  #chat-send-btn {
+    width: 100%;
+    border-radius: 8px;
+    height: 40px;
+  }
+
+  /* Trending Slider */
+  .slider-item {
+    flex: 0 0 80%; /* Show 1 item at a time */
+    min-width: 100%;
+  }
+
+  .item-text-container {
+    font-size: 0.8em;
+  }
+}
+
+/* Medium devices (Tablets: 601px - 992px) */
+@media (min-width: 601px) and (max-width: 992px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .analytics-sections {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Trending Slider */
+  .slider-item {
+    flex: 0 0 calc(50% - 12px); /* Show 2 items */
+    min-width: 45%;
+  }
+}
+
+/* Large devices (Desktops: 993px and up) */
+@media (min-width: 993px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .analytics-sections {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  /* Trending Slider */
+  .slider-item {
+    flex: 0 0 calc((100% / 5) - 12px); /* Show 5 items */
+    min-width: 18%;
+  }
+}
+
+
+
+/* Responsive adjustments for Payment & Finance Management */
+@media (max-width: 768px) {
+    .section-card {
+        padding: 10px;
+    }
+
+    .section-card h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .payment-history-tabs {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 8px;
+    }
+
+    .tab-button {
+        width: 100%; /* Full width buttons */
+        padding: 12px 15px;
+    }
+
+    .data-table th, .data-table td {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .report-controls,
+    .refund-dispute-controls,
+    .tax-invoice-controls {
+        flex-direction: column; /* Stack controls vertically */
+        align-items: stretch; /* Stretch items to full width */
+        gap: 10px;
+    }
+
+    .report-controls label,
+    .tax-invoice-controls label {
+        width: 100%; /* Ensure labels take full width */
+        text-align: left;
+    }
+
+    .report-controls select,
+    .report-controls input[type="date"],
+    .report-controls input[type="month"],
+    .tax-invoice-controls input[type="number"],
+    .refund-dispute-controls input[type="text"] {
+        width: 100%; /* Full width for inputs and buttons */
+        box-sizing: border-box; /* Include padding in width */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-card {
+        padding: 10px;
+        width: 92%;
+
+    }
+
+    .section-card h3 {
+        font-size: 1.1em;
+    }
+
+    .data-table th, .data-table td {
+        padding: 6px;
+        font-size: 0.8em;
+    }
+}
+
+/* Responsive adjustments for Marketing & Promotions Management */
+@media (max-width: 768px) {
+    #marketing-promotions-section .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #marketing-promotions-section .controls input[type="text"],
+    #marketing-promotions-section .btn-primary,
+    #marketing-promotions-section .btn-secondary {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Responsive adjustments for Feedback & Review Management */
+@media (max-width: 768px) {
+    .rating-summary {
+        padding: 10px;
+    }
+
+    .rating-summary h4 {
+        font-size: 1.1em;
+    }
+
+    .rating-summary p {
+        font-size: 0.9em;
+    }
+
+    /* Adjust controls within feedback section */
+    #feedback-review-section .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #feedback-review-section .controls input[type="text"],
+    #feedback-review-section .controls select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .rating-summary {
+        padding: 8px;
+    }
+
+    .rating-summary h4 {
+        font-size: 1em;
+    }
+
+    .rating-summary p {
+        font-size: 0.8em;
+    }
+}
+
+
+/* Extra small devices (≤480px) */
+@media (max-width: 480px) {
+  #user-management-section h1 { font-size: 20px; }
+  #user-management-section .user-toolbar { flex-direction: column; gap: 10px; }
+  #user-management-section .user-toolbar input { max-width: 100%; margin-left: 0; }
+  #user-management-section #userTable th,
+  #user-management-section #userTable td { font-size: 11px; padding: 8px; }
+  #user-management-section .action-buttons button { width: 100%; margin: 3px 0; }
+}
+
+/* Small devices (≤576px) */
+@media (max-width: 576px) {
+  #user-management-section h1 { font-size: 22px; }
+  #user-management-section #userTable th,
+  #user-management-section #userTable td { font-size: 12px; padding: 9px; }
+  #user-management-section .action-buttons button { font-size: 12px; }
+}
+
+/* Medium devices (≤768px) */
+@media (max-width: 768px) {
+  #user-management-section .user-toolbar { flex-direction: column; gap: 10px; }
+  #user-management-section .action-buttons { display: flex; flex-wrap: wrap; }
+  #user-management-section .action-buttons button { flex: 1 1 45%; margin: 5px; }
+}
+
+/* Large devices (≤992px) */
+@media (max-width: 992px) {
+  #user-management-section h1 { font-size: 24px; }
+  #user-management-section .user-toolbar input { max-width: 200px; }
+  #user-management-section #userTable th,
+  #user-management-section #userTable td { font-size: 13px; padding: 10px; }
+  #user-management-section #userTable,
+  #orderTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+
+/* -------------------- Menu Management  -------------------- */
+
+/* ≤ 992px */
+@media (max-width: 992px) {
+  #dishSearch {
+    width: 100%;
+  }
+
+  .menu-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  #menuTable {
+    font-size: 13px;
+  }
+
+  .btn-edit-dish,
+  .btn-toggle-status,
+  .btn-delete-dish {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
+
+/* ≤ 768px */
+@media (max-width: 768px) {
+  #menuTable {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border: none;
+  }
+
+  #menuTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .menu-item-img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+/* ≤ 576px (Mobile Portrait) */
+@media (max-width: 576px) {
+  #menuTable,
+  #menuTable thead,
+  #menuTable tbody,
+  #menuTable th,
+  #menuTable td,
+  #menuTable tr {
+    display: block;
+  }
+
+  #menuTable thead {
+    display: none; /* hide table headers */
+  }
+
+  #menuTable tr {
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background: #2c3e50;
+    padding: 10px;
+  }
+
+  #menuTable td {
+    border: none;
+    padding: 8px 10px;
+    text-align: right;
+    position: relative;
+  }
+
+  #menuTable td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #bbb;
+    text-transform: capitalize;
+  }
+
+  .action-buttons {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  #dishSearch {
+    width: 93%;
+  }
+}
+
+/* ≤ 480px (Small Mobile) */
+@media (max-width: 480px) {
+  .menu-toolbar .btn-primary,
+  .menu-toolbar .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-edit-dish,
+  .btn-toggle-status,
+  .btn-delete-dish {
+    flex: 1;
+    text-align: center;
+    padding: 8px 10px;
+  }
+
+  .menu-item-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+/* ---------------------------reservation-management-section-------------------------------- */
+
+/* --- Tablets (<= 992px) --- */
+@media (max-width: 992px) {
+  /* Tables scrollable */
+  #reservationTable,
+  .data-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Action buttons stack better */
+  .action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Seating & Section Cards */
+  .seating-capacity-section,
+  .section-card {
+    padding: 15px;
+  }
+
+  /* Payment Tabs */
+  .payment-history-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+}
+
+/* --- Mobile (<= 768px) --- */
+@media (max-width: 768px) {
+  /* Tables more compact */
+  #reservationTable th,
+  #reservationTable td,
+  .data-table th,
+  .data-table td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  /* Modal width full */
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+    padding: 15px;
+  }
+
+  /* Controls stack */
+  .report-controls,
+  .refund-dispute-controls,
+  .tax-invoice-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .report-controls select,
+  .report-controls input,
+  .refund-dispute-controls input,
+  .tax-invoice-controls input {
+    width: 100%;
+  }
+
+  /* Buttons full width if needed */
+  .btn-action,
+  .modal-content button {
+    width: 100%;
+  }
+}
+
+/* --- Small Mobile (<= 480px) --- */
+@media (max-width: 480px) {
+  /* Headings smaller */
+  .seating-capacity-section h2,
+  .modal-content h2,
+  .section-card h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Table shrink text */
+  #reservationTable th,
+  #reservationTable td,
+  .data-table th,
+  .data-table td {
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+
+  /* Tabs stacked */
+  .payment-history-tabs {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .tab-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Modal close button smaller */
+  .modal-content .close-btn {
+    font-size: 20px;
+  }
+}
+
+
+
+/* ---------------------------Inventory-management-section-------------------------------- */
+
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .inventory-toolbar,
+  .supplier-toolbar,
+  .purchase-history-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .low-stock-alert-section .form-group {
+    flex-direction: column;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.85rem;
+  }
+  table th, table td {
+    padding: 8px;
+  }
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+  .btn-primary, .btn-secondary, .btn-update-stock, .btn-delete-supplier {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+/* Small Mobile (<= 480px) */
+@media (max-width: 480px) {
+  .content-section h1, .content-section h2 {
+    font-size: 1.1rem;
+  }
+  table {
+    font-size: 0.75rem;
+  }
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .tab-button, .btn-primary, .btn-secondary {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+/* =========================
+   Payment section 
+   ========================= */
+
+/* =========================
+   Responsive Enhancements
+   ========================= */
+
+/* --- Tablet (<= 992px) --- */
+@media (max-width: 992px) {
+  /* Make tables scrollable */
+  .data-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Tab buttons wrap if needed */
+  .payment-history-tabs {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  /* Section card padding a bit tighter */
+  .section-card {
+    padding: 11px;
+  }
+
+  /* Controls stack nicer */
+  .report-controls,
+  .refund-dispute-controls,
+  .tax-invoice-controls {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+/* --- Mobile (<= 768px) --- */
+@media (max-width: 768px) {
+  /* Table text smaller */
+  .data-table th,
+  .data-table td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  /* Tab buttons full width if stacked */
+  .tab-button {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  /* Controls become column */
+  .report-controls,
+  .refund-dispute-controls,
+  .tax-invoice-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .report-controls select,
+  .report-controls input,
+  .refund-dispute-controls input,
+  .tax-invoice-controls input {
+    width: 100%;
+  }
+
+  .btn-action,
+  .report-controls button,
+  .refund-dispute-controls button,
+  .tax-invoice-controls button {
+    width: 100%;
+  }
+}
+
+/* --- Small Mobile (<= 480px) --- */
+@media (max-width: 480px) {
+  /* Headings smaller */
+  .section-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+  }
+
+  /* Table text even smaller */
+  .data-table th,
+  .data-table td {
+    font-size: 0.75rem;
+    padding: 6px;
+  }
+
+  /* Tabs stacked vertically */
+  .payment-history-tabs {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .tab-button {
+    width: 100%;
+  }
+
+  /* Buttons font smaller */
+  .btn-action,
+  .tab-button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}

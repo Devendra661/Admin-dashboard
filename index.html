@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="icon" href="assets/icon/user.png" type="image/png">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/adminresponsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+</head>
+
+<body>
+  <div id="alert-container"></div>
+  <!-- Top Bar for mobile -->
+  <div class="top-bar">
+    <button class="hamburger-menu" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <h1 class="admin-header-title">Admin</h1>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="left-panel" id="left-panel">
+    <h2>Admin Dashboard</h2>
+    <nav>
+      <ul>
+        <li><a href="#dashboard-section"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="#user-management-section"><i class="fas fa-users"></i> User Management</a></li>
+        <li><a href="#menu-management-section"><i class="fas fa-utensils"></i> Menu Management</a></li>
+        <li><a href="#order-management-section"><i class="fas fa-shopping-cart"></i> Order Management</a></li>
+        <li><a href="#reservation-management-section"><i class="fas fa-book"></i> Reservation Management</a></li>
+        <li><a href="#inventory-management-section"><i class="fas fa-warehouse"></i> Inventory Management</a></li>
+        <li><a href="#staff-management-section"><i class="fas fa-user-tie"></i> Staff Management</a></li>
+        <li><a href="#payment-finance-section"><i class="fas fa-money-bill-wave"></i> Payment & Finance</a></li>
+        <li><a href="#marketing-promotions-section"><i class="fas fa-bullhorn"></i> Marketing & Promotions</a></li>
+        <li><a href="#feedback-review-section"><i class="fas fa-comments"></i> Feedback & Review</a></li>
+        <li><a href="#report-analysis-section"><i class="fas fa-chart-line"></i> Report & Analysis</a></li>
+        <li><a href="#setting-section"><i class="fas fa-cog"></i> Setting</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="right-panel">
+    <header class="admin-header">
+      <div class="header-column welcome-section">
+        <h2>Welcome Snap</h2>
+      </div>
+      <div class="header-column search-section">
+        <div class="search-box">
+          <input type="text" placeholder="Search...">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+      <div class="header-column user-section">
+        <div class="notification-wrapper">
+          <div class="notification-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+        </div>
+        <div class="profile-info">
+          <img src="assets/icon/user.png" alt="Profile Picture" class="profile-pic">
+          <div class="profile-text">
+            <span class="profile-name">Snap</span>
+            <span class="profile-role">Admin</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--------------------------- dashboard-section ------------------------------>
+
+    <div id="dashboard-section" class="content-section active-section">
+      <h1><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+      <div class="main-content-area">
+
+        <!-- Dashboard Cards -->
+        <div class="dashboard-cards">
+
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon"><i class="fas fa-dollar-sign"></i></div>
+              <div class="card-details">
+                <div class="card-title">Total Revenue</div>
+                <div class="card-number" data-target="12345">0</div>
+              </div>
+            </div>
+            <div class="progress-circle" data-progress="85">
+              <svg class="progress-ring" width="80" height="80">
+                <circle class="progress-ring-bg" stroke="#34495e" stroke-width="8" fill="transparent" r="36" cx="40"
+                  cy="40" />
+                <circle class="progress-ring-circle" stroke="#12c0c0" stroke-width="8" fill="transparent" r="36" cx="40"
+                  cy="40" />
+              </svg>
+              <div class="progress-text">85%</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+              <div class="card-details">
+                <div class="card-title">Total Order</div>
+                <div class="card-number" data-target="500">0</div>
+              </div>
+            </div>
+            <div class="progress-circle" data-progress="60">
+              <svg class="progress-ring" width="80" height="80">
+                <circle class="progress-ring-bg" stroke="#34495e" stroke-width="8" fill="transparent" r="36" cx="40"
+                  cy="40" />
+                <circle class="progress-ring-circle" stroke="#12c0c0" stroke-width="8" fill="transparent" r="36" cx="40"
+                  cy="40" />
+              </svg>
+              <div class="progress-text">60%</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon"><i class="fas fa-users"></i></div>
+              <div class="card-details">
+                <div class="card-title">Total Customer</div>
+                <div class="card-number" data-target="2500">0</div>
+              </div>
+            </div>
+            <div class="progress-circle" data-progress="90">
+              <svg class="progress-ring" width="80" height="80">
+                <circle class="progress-ring-bg" stroke="#34495e" stroke-width="8" fill="transparent" r="36" cx="40"
+                  cy="40" />
+                <circle class="progress-ring-circle" stroke="#12c0c0" stroke-width="8" fill="transparent" r="36" cx="40"
+                  cy="40" />
+              </svg>
+              <div class="progress-text">90%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Analytics Sections -->
+        <div class="analytics-sections">
+
+          <!-- Sales Details -->
+          <div class="sales-details-section section-card">
+            <h2><i class="fas fa-chart-pie"></i> Sales Details</h2>
+            <div class="filter-controls">
+              <label for="month-filter-sales"><i class="fas fa-calendar-alt"></i> Month:</label>
+              <select id="month-filter-sales">
+                <option value="all">All Months</option>
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+              </select>
+            </div>
+            <div class="sales-stats">
+              <p><i class="fas fa-receipt"></i> Total Orders: <span class="stat-value">1234</span></p>
+              <p><i class="fas fa-truck"></i> Running Orders: <span class="stat-value">56</span></p>
+              <p><i class="fas fa-coins"></i> Total Revenue: <span class="stat-value">$56,789</span></p>
+              <p><i class="fas fa-user-plus"></i> Customer Growth: <span class="stat-value">12%</span></p>
+            </div>
+            <div class="chart-container">
+              <canvas id="salesPieChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Order Chart -->
+          <div class="order-chart-section section-card">
+            <h2><i class="fas fa-chart-bar"></i> Order Chart</h2>
+            <div class="filter-controls">
+              <label for="month-filter-orders"><i class="fas fa-calendar-alt"></i> Month:</label>
+              <select id="month-filter-orders">
+                <option value="all">All Months</option>
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+              </select>
+            </div>
+            <div class="chart-container">
+              <canvas id="ordersBarChart"></canvas>
+            </div>
+            <div class="chart-numbers">
+              <p><i class="fas fa-box"></i> Orders this month: <span class="stat-value">450</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trending Items Slider -->
+        <div class="trending-items-slider-section section-card">
+          <h2><i class="fas fa-fire"></i> Trending Items</h2>
+          <div class="slider-wrapper">
+            <button class="slider-nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="slider-container">
+              <!-- Items -->
+              <div class="slider-item">
+                <div class="item-image-container">
+                  <img src="assets/images/Spicy Paneer Pizza.jpg" alt="Spicy Paneer Pizza" class="item-image">
+                </div>
+                <div class="item-text-container">
+                  <span class="item-name"><i class="fas fa-pizza-slice"></i> Spicy Paneer Pizza</span>
+                  <span class="item-price">$14.99</span>
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="item-image-container">
+                  <img src="assets/images/Veggie Delight Pizza.jpg" alt="Veggie Delight Pizza" class="item-image">
+                </div>
+                <div class="item-text-container">
+                  <span class="item-name"><i class="fas fa-leaf"></i> Veggie Delight Pizza</span>
+                  <span class="item-price">$16.50</span>
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="item-image-container">
+                  <img src="assets/images/Lauki Halwa.jpg" alt="Chicken Burger" class="item-image">
+                </div>
+                <div class="item-text-container">
+                  <span class="item-name"><i class="fas fa-hamburger"></i> Lauki Halwa</span>
+                  <span class="item-price">$7.50</span>
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="item-image-container">
+                  <img src="assets/images/Hyderabadi Veg Biryani.jpg" alt="Hyderabadi Veg Biryani" class="item-image">
+                </div>
+                <div class="item-text-container">
+                  <span class="item-name"><i class="fas fa-bowl-rice"></i> Hyderabadi Veg Biryani</span>
+                  <span class="item-price">$15.00</span>
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="item-image-container">
+                  <img src="assets/images/Gajar Halwa.jpg" alt="Gajar Halwa" class="item-image">
+                </div>
+                <div class="item-text-container">
+                  <span class="item-name"><i class="fas fa-ice-cream"></i> Gajar Halwa</span>
+                  <span class="item-price">$17.00</span>
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="item-image-container">
+                  <img src="assets/images/Manchow Soup.jpg" alt="Manchow Soup" class="item-image">
+                </div>
+                <div class="item-text-container">
+                  <span class="item-name"><i class="fas fa-mug-hot"></i> Manchow Soup</span>
+                  <span class="item-price">$9.00</span>
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="item-image-container">
+                  <img src="assets/images/Hot Tea.jpg" alt="Hot Tea" class="item-image">
+                </div>
+                <div class="item-text-container">
+                  <span class="item-name"><i class="fas fa-coffee"></i> Hot Tea</span>
+                  <span class="item-price">$11.00</span>
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="item-image-container">
+                  <img src="assets/images/Watermelon Juice.jpg" alt="Watermelon Juice" class="item-image">
+                </div>
+                <div class="item-text-container">
+                  <span class="item-name"><i class="fas fa-wine-glass-alt"></i> Watermelon Juice</span>
+                  <span class="item-price">$6.00</span>
+                </div>
+              </div>
+            </div>
+            <button class="slider-nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+
+          <!-- Live Chat -->
+          <div class="chat-section section-card">
+            <h2><i class="fas fa-comments"></i> Live Chat</h2>
+            <div class="chat-messages" id="chat-messages">
+              <div class="message received">
+                <span class="sender"><i class="fas fa-user-shield"></i> Admin:</span> Hello! How can I help you?
+              </div>
+              <div class="message sent">
+                <span class="sender"><i class="fas fa-user"></i> You:</span> I need assistance with an order.
+              </div>
+            </div>
+            <div class="chat-input-area">
+              <input type="text" id="chat-input" placeholder="Type your message...">
+              <button id="chat-send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--------------------------- user-management-section ------------------------------>
+
+    <div id="user-management-section" class="content-section">
+      <h1><i class="fas fa-users-cog"></i> User Management</h1>
+
+      <!-- Toolbar for User Management -->
+      <div class="user-toolbar">
+        <button id="addUserBtn" class="btn-primary">
+          <i class="fas fa-user-plus"></i> Add User
+        </button>
+        <input type="text" id="userSearch" placeholder="🔍 Search users...">
+      </div>
+
+      <!-- Table to display users -->
+      <div class="table-wrapper">
+        <table id="userTable">
+          <thead>
+            <tr>
+              <th><i class="fas fa-id-badge"></i> ID</th>
+              <th><i class="fas fa-user"></i> Name</th>
+              <th><i class="fas fa-envelope"></i> Email</th>
+              <th><i class="fas fa-user-tag"></i> Role</th>
+              <th><i class="fas fa-cogs"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example user rows -->
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>john.doe@example.com</td>
+              <td>Customer</td>
+              <td class="action-buttons">
+                <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                <button class="btn-reset-password"><i class="fas fa-key"></i> Reset Password</button>
+                <button class="btn-assign-role"><i class="fas fa-user-shield"></i> Assign Role</button>
+                <button class="btn-view-activity"><i class="fas fa-history"></i> View Activity</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Jane Smith</td>
+              <td>jane.smith@example.com</td>
+              <td>Staff</td>
+              <td class="action-buttons">
+                <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                <button class="btn-reset-password"><i class="fas fa-key"></i> Reset Password</button>
+                <button class="btn-assign-role"><i class="fas fa-user-shield"></i> Assign Role</button>
+                <button class="btn-view-activity"><i class="fas fa-history"></i> View Activity</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Admin User</td>
+              <td>admin@example.com</td>
+              <td>Admin</td>
+              <td class="action-buttons">
+                <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                <button class="btn-reset-password"><i class="fas fa-key"></i> Reset Password</button>
+                <button class="btn-assign-role"><i class="fas fa-user-shield"></i> Assign Role</button>
+                <button class="btn-view-activity"><i class="fas fa-history"></i> View Activity</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal for Add/Edit User -->
+      <div id="userModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="modalTitle"><i class="fas fa-user-plus"></i> Add User</h2>
+          <form id="userForm">
+            <input type="hidden" id="userId">
+            <label for="userName"><i class="fas fa-user"></i> Name:</label>
+            <input type="text" id="userName" required>
+            <label for="userEmail"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" id="userEmail" required>
+            <label for="userRole"><i class="fas fa-user-tag"></i> Role:</label>
+            <select id="userRole">
+              <option value="customer">Customer</option>
+              <option value="staff">Staff</option>
+              <option value="admin">Admin</option>
+            </select>
+            <button type="submit" class="btn-primary">
+              <i class="fas fa-save"></i> Save
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for User Activity -->
+      <div id="activityModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2><i class="fas fa-history"></i> User Activity</h2>
+          <div id="userActivityContent">
+            <!-- Activity content will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--------------------------- menu-management-sectionMenu Management ------------------------------>
+
+    <div id="menu-management-section" class="content-section">
+      <h1><i class="fa-solid fa-utensils"></i> Menu Management</h1>
+
+      <div class="menu-toolbar">
+        <button id="addDishBtn" class="btn-primary">
+          <i class="fa-solid fa-plus"></i> Add New Dish
+        </button>
+        <button id="manageCategoriesBtn" class="btn-secondary">
+          <i class="fa-solid fa-list"></i> Manage Categories
+        </button>
+        <button id="manageOffersBtn" class="btn-secondary">
+          <i class="fa-solid fa-tags"></i> Manage Daily Offers
+        </button>
+        <input type="text" id="dishSearch" placeholder="🔍 Search dishes...">
+      </div>
+
+      <div class="table-wrapper">
+        <table id="menuTable">
+          <thead>
+            <tr>
+              <th><i class="fa-solid fa-hashtag"></i> ID</th>
+              <th><i class="fa-solid fa-image"></i> Image</th>
+              <th><i class="fa-solid fa-burger"></i> Name</th>
+              <th><i class="fa-solid fa-carrot"></i> Description/Ingredients</th>
+              <th><i class="fa-solid fa-layer-group"></i> Category</th>
+              <th><i class="fa-solid fa-dollar-sign"></i> Price</th>
+              <th><i class="fa-solid fa-circle-info"></i> Status</th>
+              <th><i class="fa-solid fa-gear"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><img src="assets/images/Spicy Paneer Pizza.jpg" alt="Spicy Paneer Pizza" class="menu-item-img"></td>
+              <td>Spicy Paneer Pizza</td>
+              <td>Spicy paneer, onion, capsicum, and cheese.</td>
+              <td>Pizza</td>
+              <td>$12.99</td>
+              <td class="status-active"><i class="fa-solid fa-check-circle"></i> Active</td>
+              <td class="action-buttons">
+                <button class="btn-edit-dish" data-id="1"><i class="fa-solid fa-pen"></i> Edit</button>
+                <button class="btn-toggle-status" data-id="1"><i class="fa-solid fa-ban"></i> Disable</button>
+                <button class="btn-delete-dish" data-id="1"><i class="fa-solid fa-trash"></i> Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><img src="assets/images/Chicken Burger.jpg" alt="Chicken Burger" class="menu-item-img"></td>
+              <td>Chicken Burger</td>
+              <td>Grilled chicken patty, lettuce, tomato, and special sauce.</td>
+              <td>Burger</td>
+              <td>$8.50</td>
+              <td class="status-active"><i class="fa-solid fa-check-circle"></i> Active</td>
+              <td class="action-buttons">
+                <button class="btn-edit-dish" data-id="2"><i class="fa-solid fa-pen"></i> Edit</button>
+                <button class="btn-toggle-status" data-id="2"><i class="fa-solid fa-ban"></i> Disable</button>
+                <button class="btn-delete-dish" data-id="2"><i class="fa-solid fa-trash"></i> Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><img src="assets/images/Chocolate.jpg" alt="Chocolate Milkshake" class="menu-item-img"></td>
+              <td>Chocolate Milkshake</td>
+              <td>Rich chocolate ice cream blended with milk.</td>
+              <td>Drinks</td>
+              <td>$4.00</td>
+              <td class="status-inactive"><i class="fa-solid fa-xmark-circle"></i> Inactive</td>
+              <td class="action-buttons">
+                <button class="btn-edit-dish" data-id="3"><i class="fa-solid fa-pen"></i> Edit</button>
+                <button class="btn-toggle-status" data-id="3"><i class="fa-solid fa-check"></i> Enable</button>
+                <button class="btn-delete-dish" data-id="3"><i class="fa-solid fa-trash"></i> Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal for Add/Edit Dish -->
+      <div id="dishModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+          <h2 id="dishModalTitle"><i class="fa-solid fa-plus"></i> Add New Dish</h2>
+          <form id="dishForm">
+            <input type="hidden" id="dishId">
+            <label for="dishImage"><i class="fa-solid fa-image"></i> Image URL:</label>
+            <input type="text" id="dishImage" placeholder="e.g., assets/images/pizza.jpg">
+            <label for="dishName"><i class="fa-solid fa-burger"></i> Name:</label>
+            <input type="text" id="dishName" required>
+            <label for="dishDescription"><i class="fa-solid fa-align-left"></i> Description:</label>
+            <textarea id="dishDescription" rows="3"></textarea>
+            <label for="dishIngredients"><i class="fa-solid fa-carrot"></i> Ingredients:</label>
+            <input type="text" id="dishIngredients">
+            <label for="dishPrice"><i class="fa-solid fa-dollar-sign"></i> Price:</label>
+            <input type="number" id="dishPrice" step="0.01" required>
+            <label for="dishCategory"><i class="fa-solid fa-layer-group"></i> Category:</label>
+            <select id="dishCategory">
+              <option value="Pizza">Pizza</option>
+              <option value="Burger">Burger</option>
+              <option value="Drinks">Drinks</option>
+              <option value="Desserts">Desserts</option>
+              <option value="Biryani">Biryani</option>
+              <option value="Soup">Soup</option>
+              <option value="Tea">Tea</option>
+              <option value="Halwa">Halwa</option>
+            </select>
+            <label for="dishStatus"><i class="fa-solid fa-circle-info"></i> Status:</label>
+            <select id="dishStatus">
+              <option value="available">Available</option>
+              <option value="out_of_stock">Out of Stock</option>
+            </select>
+            <button type="submit" class="btn-primary"><i class="fa-solid fa-save"></i> Save Dish</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for Manage Categories -->
+      <div id="categoryModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+          <h2><i class="fa-solid fa-list"></i> Manage Categories</h2>
+          <div id="categoryList">
+            <div class="category-item">
+              <span><i class="fa-solid fa-pizza-slice"></i> Pizza</span>
+              <button class="btn-delete-category"><i class="fa-solid fa-trash"></i> Delete</button>
+            </div>
+            <div class="category-item">
+              <span><i class="fa-solid fa-burger"></i> Burger</span>
+              <button class="btn-delete-category"><i class="fa-solid fa-trash"></i> Delete</button>
+            </div>
+          </div>
+          <div class="add-category-form">
+            <input type="text" id="newCategoryName" placeholder="New Category Name">
+            <button id="addCategoryBtn" class="btn-primary"><i class="fa-solid fa-plus"></i> Add Category</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Manage Daily Offers -->
+      <div id="offerModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+          <h2><i class="fa-solid fa-tags"></i> Manage Daily Offers</h2>
+          <div id="offerList">
+            <div class="offer-item">
+              <span><i class="fa-solid fa-bolt"></i> 20% off on all Pizzas!</span>
+              <button class="btn-delete-offer"><i class="fa-solid fa-trash"></i> Delete</button>
+            </div>
+          </div>
+          <div class="add-offer-form">
+            <input type="text" id="newOfferText" placeholder="New Offer Description">
+            <button id="addOfferBtn" class="btn-primary"><i class="fa-solid fa-plus"></i> Add Offer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--------------------------- order-management-section ------------------------------>
+
+    <div id="order-management-section" class="content-section">
+      <h1><i class="fas fa-receipt"></i> Order Management</h1>
+
+      <div class="order-toolbar">
+        <div class="order-filters">
+          <label for="orderStatusFilter"><i class="fas fa-filter"></i> Filter by Status:</label>
+          <select id="orderStatusFilter">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="in-progress">In Progress</option>
+            <option value="complete">Complete</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+        </div>
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="orderSearch" placeholder="Search orders...">
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="orderTable">
+          <thead>
+            <tr>
+              <th><i class="fas fa-hashtag"></i> Order ID</th>
+              <th><i class="fas fa-user"></i> Customer</th>
+              <th><i class="fas fa-utensils"></i> Items</th>
+              <th><i class="fas fa-dollar-sign"></i> Total</th>
+              <th><i class="fas fa-info-circle"></i> Status</th>
+              <th><i class="fas fa-user-tie"></i> Assigned Staff</th>
+              <th><i class="fas fa-cogs"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#001</td>
+              <td>John Doe</td>
+              <td>Burger, Fries</td>
+              <td>$15.00</td>
+              <td>
+                <select class="order-status-select">
+                  <option value="pending">Pending</option>
+                  <option value="confirmed">Confirmed</option>
+                  <option value="preparing">Preparing</option>
+                  <option value="out-for-delivery">Out for Delivery</option>
+                  <option value="complete">Complete</option>
+                  <option value="cancelled">Cancelled</option>
+                </select>
+              </td>
+              <td>
+                <select class="delivery-staff-select">
+                  <option value="">Unassigned</option>
+                  <option value="staff1">Delivery Staff 1</option>
+                  <option value="staff2">Delivery Staff 2</option>
+                </select>
+              </td>
+              <td>
+                <button class="btn-print-invoice"><i class="fas fa-file-invoice"></i> Print/Download</button>
+                <button class="btn-refund-cancel"><i class="fas fa-undo-alt"></i> Refund/Cancel</button>
+              </td>
+            </tr>
+            <!-- Repeat other rows with same button icons -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modals -->
+      <!-- Update Status -->
+      <div id="updateStatusModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2><i class="fas fa-tasks"></i> Update Order Status</h2>
+          <form id="updateStatusForm">
+            <input type="hidden" id="orderIdStatus">
+            <label for="currentOrderStatus"><i class="fas fa-info-circle"></i> Current Status:</label>
+            <input type="text" id="currentOrderStatus" readonly>
+            <label for="newOrderStatus"><i class="fas fa-sync"></i> New Status:</label>
+            <select id="newOrderStatus">
+              <option value="pending">Pending</option>
+              <option value="in-progress">In Progress</option>
+              <option value="preparing">Preparing</option>
+              <option value="out-for-delivery">Out for Delivery</option>
+              <option value="complete">Complete</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+            <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Update</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Assign Staff -->
+      <div id="assignStaffModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2><i class="fas fa-user-plus"></i> Assign Staff to Order</h2>
+          <form id="assignStaffForm">
+            <input type="hidden" id="orderIdStaff">
+            <label for="staffSelect"><i class="fas fa-user-tie"></i> Select Staff:</label>
+            <select id="staffSelect">
+              <option value="Alex">Alex</option>
+              <option value="Sara">Sara</option>
+            </select>
+            <button type="submit" class="btn-primary"><i class="fas fa-check"></i> Assign</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Invoice -->
+      <div id="invoiceModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2><i class="fas fa-file-invoice-dollar"></i> Order Invoice</h2>
+          <div id="invoiceContent">
+            <p><strong>Order ID:</strong> <span id="invoiceOrderId"></span></p>
+            <p><strong>Customer:</strong> <span id="invoiceCustomer"></span></p>
+            <p><strong>Items:</strong> <span id="invoiceItems"></span></p>
+            <p><strong>Total:</strong> <span id="invoiceTotal"></span></p>
+            <p><strong>Status:</strong> <span id="invoiceStatus"></span></p>
+            <p><strong>Date:</strong> <span id="invoiceDate"></span></p>
+          </div>
+          <button id="downloadInvoiceBtn" class="btn-primary"><i class="fas fa-download"></i> Download</button>
+          <button id="printInvoiceBtn" class="btn-secondary"><i class="fas fa-print"></i> Print</button>
+        </div>
+      </div>
+
+      <!-- Refund -->
+      <div id="refundCancelModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2><i class="fas fa-undo-alt"></i> Refund/Cancellation</h2>
+          <form id="refundCancelForm">
+            <input type="hidden" id="orderIdRefundCancel">
+            <label for="refundAmount"><i class="fas fa-dollar-sign"></i> Refund Amount:</label>
+            <input type="number" id="refundAmount" step="0.01" required>
+            <label for="cancellationReason"><i class="fas fa-comment-alt"></i> Reason for Cancellation:</label>
+            <textarea id="cancellationReason" rows="3"></textarea>
+            <button type="submit" class="btn-primary"><i class="fas fa-check-circle"></i> Process</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------- reservation-management-section ------------------------------>
+    <div id="reservation-management-section" class="content-section">
+      <h1><i class="fa-solid fa-calendar-check"></i> Reservation Management</h1>
+
+      <!-- Toolbar -->
+      <div class="reservation-toolbar">
+        <button id="addReservationBtn" class="btn-primary">
+          <i class="fa-solid fa-plus"></i> Add New Reservation
+        </button>
+        <button id="manageCapacityBtn" class="btn-secondary">
+          <i class="fa-solid fa-chair"></i> Manage Seating Capacity
+        </button>
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="reservationSearch" placeholder="Search reservations...">
+        </div>
+      </div>
+
+      <!-- Reservation Table -->
+      <div class="table-wrapper">
+        <table id="reservationTable">
+          <thead>
+            <tr>
+              <th><i class="fa-solid fa-hashtag"></i> Resv. ID</th>
+              <th><i class="fa-solid fa-user"></i> Name</th>
+              <th><i class="fa-solid fa-calendar-day"></i> Date</th>
+              <th><i class="fa-solid fa-clock"></i> Time</th>
+              <th><i class="fa-solid fa-users"></i> Guests</th>
+              <th><i class="fa-solid fa-chair"></i> Table</th>
+              <th><i class="fa-solid fa-circle-check"></i> Status</th>
+              <th><i class="fa-solid fa-note-sticky"></i> Special Notes</th>
+              <th><i class="fa-solid fa-gears"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>R001</td>
+              <td>John Doe</td>
+              <td>2025-08-20</td>
+              <td>18:00</td>
+              <td>4</td>
+              <td>Table 5</td>
+              <td><span class="status-confirmed"><i class="fa-solid fa-check"></i> Confirmed</span></td>
+              <td>Birthday celebration</td>
+              <td class="action-buttons">
+                <button class="btn-accept-reservation" data-id="R001"><i class="fa-solid fa-check"></i> Accept</button>
+                <button class="btn-reject-reservation" data-id="R001"><i class="fa-solid fa-xmark"></i> Reject</button>
+                <button class="btn-assign-table" data-id="R001"><i class="fa-solid fa-chair"></i> Assign Table</button>
+              </td>
+            </tr>
+            <tr>
+              <td>R002</td>
+              <td>Jane Smith</td>
+              <td>2025-08-21</td>
+              <td>19:30</td>
+              <td>2</td>
+              <td>Unassigned</td>
+              <td><span class="status-pending"><i class="fa-solid fa-hourglass-half"></i> Pending</span></td>
+              <td>Anniversary dinner</td>
+              <td class="action-buttons">
+                <button class="btn-accept-reservation" data-id="R002"><i class="fa-solid fa-check"></i> Accept</button>
+                <button class="btn-reject-reservation" data-id="R002"><i class="fa-solid fa-xmark"></i> Reject</button>
+                <button class="btn-assign-table" data-id="R002"><i class="fa-solid fa-chair"></i> Assign Table</button>
+              </td>
+            </tr>
+            <tr>
+              <td>R003</td>
+              <td>Peter Jones</td>
+              <td>2025-08-22</td>
+              <td>13:00</td>
+              <td>6</td>
+              <td>Table 10</td>
+              <td><span class="status-rejected"><i class="fa-solid fa-ban"></i> Rejected</span></td>
+              <td>None</td>
+              <td class="action-buttons">
+                <button class="btn-accept-reservation" data-id="R003"><i class="fa-solid fa-check"></i> Accept</button>
+                <button class="btn-reject-reservation" data-id="R003"><i class="fa-solid fa-xmark"></i> Reject</button>
+                <button class="btn-assign-table" data-id="R003"><i class="fa-solid fa-chair"></i> Assign Table</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal for Add/Edit Reservation -->
+      <div id="reservationModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+          <h2 id="reservationModalTitle"><i class="fa-solid fa-calendar-plus"></i> Add New Reservation</h2>
+          <form id="reservationForm">
+            <input type="hidden" id="reservationId">
+            <label for="resvName"><i class="fa-solid fa-user"></i> Name:</label>
+            <input type="text" id="resvName" required>
+            <label for="resvDate"><i class="fa-solid fa-calendar"></i> Date:</label>
+            <input type="date" id="resvDate" required>
+            <label for="resvTime"><i class="fa-solid fa-clock"></i> Time:</label>
+            <input type="time" id="resvTime" required>
+            <label for="resvGuests"><i class="fa-solid fa-users"></i> Number of Guests:</label>
+            <input type="number" id="resvGuests" min="1" required>
+            <label for="resvTable"><i class="fa-solid fa-chair"></i> Table (optional):</label>
+            <input type="text" id="resvTable">
+            <label for="resvNotes"><i class="fa-solid fa-note-sticky"></i> Special Notes:</label>
+            <textarea id="resvNotes" rows="3"></textarea>
+            <button type="submit" class="btn-primary"><i class="fa-solid fa-floppy-disk"></i> Save Reservation</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for Accept/Reject Reservation -->
+      <div id="acceptRejectModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+          <h2><i class="fa-solid fa-check-double"></i> Accept/Reject Reservation</h2>
+          <p><i class="fa-solid fa-hashtag"></i> Reservation ID: <span id="arResvId"></span></p>
+          <p><i class="fa-solid fa-user"></i> Customer: <span id="arResvName"></span></p>
+          <p><i class="fa-solid fa-calendar-day"></i> Date: <span id="arResvDate"></span></p>
+          <p><i class="fa-solid fa-clock"></i> Time: <span id="arResvTime"></span></p>
+          <p><i class="fa-solid fa-users"></i> Guests: <span id="arResvGuests"></span></p>
+          <p><i class="fa-solid fa-note-sticky"></i> Notes: <span id="arResvNotes"></span></p>
+          <div class="modal-actions">
+            <button id="acceptResvBtn" class="btn-primary"><i class="fa-solid fa-check"></i> Accept</button>
+            <button id="rejectResvBtn" class="btn-danger"><i class="fa-solid fa-xmark"></i> Reject</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal for Assign Table & Timing -->
+      <div id="assignTableModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+          <h2><i class="fa-solid fa-chair"></i> Assign Table & Timing</h2>
+          <p><i class="fa-solid fa-hashtag"></i> Reservation ID: <span id="atResvId"></span></p>
+          <p><i class="fa-solid fa-user"></i> Customer: <span id="atResvName"></span></p>
+          <label for="assignTable"><i class="fa-solid fa-chair"></i> Assign Table:</label>
+          <input type="text" id="assignTable">
+          <label for="assignTime"><i class="fa-solid fa-clock"></i> Adjust Time (optional):</label>
+          <input type="time" id="assignTime">
+          <button id="saveAssignmentBtn" class="btn-primary"><i class="fa-solid fa-floppy-disk"></i> Save
+            Assignment</button>
+        </div>
+      </div>
+
+      <!-- Seating Capacity Management Section -->
+      <div class="seating-capacity-section">
+        <h2><i class="fa-solid fa-couch"></i> Seating Capacity Management</h2>
+        <label for="totalTables"><i class="fa-solid fa-table-list"></i> Total Tables:</label>
+        <input type="number" id="totalTables" value="15" min="1">
+        <label for="availableSeats"><i class="fa-solid fa-chair"></i> Available Seats:</label>
+        <input type="number" id="availableSeats" value="60" min="0">
+        <button id="updateCapacityBtn" class="btn-primary"><i class="fa-solid fa-rotate"></i> Update Capacity</button>
+        <p><i class="fa-solid fa-info-circle"></i> Current Capacity: <span id="currentCapacity"></span> tables, <span
+            id="currentSeats"></span> seats</p>
+      </div>
+    </div>
+
+
+    <!--------------------------- inventory-management-section ------------------------------>
+
+    <div id="inventory-management-section" class="content-section">
+      <h1><i class="fas fa-boxes"></i> Inventory Management</h1>
+
+      <div class="inventory-toolbar">
+        <button id="addInventoryItemBtn" class="btn-primary">
+          <i class="fas fa-plus-circle"></i> Add New Item
+        </button>
+        <button id="manageSuppliersBtn" class="btn-secondary">
+          <i class="fas fa-truck"></i> Manage Suppliers
+        </button>
+        <button id="viewPurchaseHistoryBtn" class="btn-secondary">
+          <i class="fas fa-history"></i> Purchase History
+        </button>
+        <input type="text" id="inventorySearch" placeholder="🔍 Search items...">
+      </div>
+
+      <div class="table-wrapper">
+        <table id="inventoryTable">
+          <thead>
+            <tr>
+              <th><i class="fas fa-hashtag"></i> Item ID</th>
+              <th><i class="fas fa-tag"></i> Name</th>
+              <th><i class="fas fa-box"></i> Current Stock</th>
+              <th><i class="fas fa-ruler-combined"></i> Unit</th>
+              <th><i class="fas fa-exclamation-triangle"></i> Min Stock</th>
+              <th><i class="fas fa-traffic-light"></i> Status</th>
+              <th><i class="fas fa-truck-loading"></i> Supplier</th>
+              <th><i class="fas fa-calendar-alt"></i> Last Updated</th>
+              <th><i class="fas fa-cogs"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>INV001</td>
+              <td>Tomatoes</td>
+              <td>20</td>
+              <td>kg</td>
+              <td>10</td>
+              <td><span class="status-ok"><i class="fas fa-check-circle"></i> OK</span></td>
+              <td>Veggie Supplier A</td>
+              <td>2025-08-18</td>
+              <td class="action-buttons">
+                <button class="btn-edit-item" data-id="INV001"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-update-stock" data-id="INV001"><i class="fas fa-sync-alt"></i> Update Stock</button>
+              </td>
+            </tr>
+            <tr>
+              <td>INV002</td>
+              <td>Cheese</td>
+              <td>5</td>
+              <td>kg</td>
+              <td>8</td>
+              <td><span class="status-low"><i class="fas fa-exclamation-circle"></i> Low</span></td>
+              <td>Dairy Delights</td>
+              <td>2025-08-17</td>
+              <td class="action-buttons">
+                <button class="btn-edit-item" data-id="INV002"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-update-stock" data-id="INV002"><i class="fas fa-sync-alt"></i> Update Stock</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Low Stock Alerts -->
+      <div class="low-stock-alert-section section-card">
+        <h2><i class="fas fa-bell"></i> Low Stock Alerts</h2>
+        <div id="lowStockAlerts">
+          <p><i class="fas fa-check"></i> No low stock items currently.</p>
+        </div>
+        <div class="form-group">
+          <label for="lowStockThreshold"><i class="fas fa-sliders-h"></i> Set Low Stock Threshold:</label>
+          <input type="number" id="lowStockThreshold" value="10" min="1">
+          <button id="updateThresholdBtn" class="btn-primary"><i class="fas fa-save"></i> Update Threshold</button>
+        </div>
+      </div>
+
+      <!-- Supplier Management -->
+      <div id="supplier-management-section" class="content-section section-card">
+        <h2><i class="fas fa-truck"></i> Supplier Management</h2>
+        <div class="supplier-toolbar">
+          <button id="addSupplierBtn" class="btn-primary"><i class="fas fa-user-plus"></i> Add New Supplier</button>
+          <input type="text" id="supplierSearch" placeholder="🔍 Search suppliers...">
+        </div>
+        <div class="table-wrapper">
+          <table id="supplierTable">
+            <thead>
+              <tr>
+                <th><i class="fas fa-hashtag"></i> Supplier ID</th>
+                <th><i class="fas fa-building"></i> Name</th>
+                <th><i class="fas fa-user"></i> Contact Person</th>
+                <th><i class="fas fa-phone"></i> Phone</th>
+                <th><i class="fas fa-envelope"></i> Email</th>
+                <th><i class="fas fa-cogs"></i> Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SUP001</td>
+                <td>Veggie Supplier A</td>
+                <td>Alice Green</td>
+                <td>123-456-7890</td>
+                <td>alice@veggie.com</td>
+                <td class="action-buttons">
+                  <button class="btn-edit-supplier" data-id="SUP001"><i class="fas fa-edit"></i> Edit</button>
+                  <button class="btn-delete-supplier" data-id="SUP001"><i class="fas fa-trash"></i> Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>SUP002</td>
+                <td>Dairy Delights</td>
+                <td>Bob Milk</td>
+                <td>987-654-3210</td>
+                <td>bob@dairy.com</td>
+                <td class="action-buttons">
+                  <button class="btn-edit-supplier" data-id="SUP002"><i class="fas fa-edit"></i> Edit</button>
+                  <button class="btn-delete-supplier" data-id="SUP002"><i class="fas fa-trash"></i> Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Purchase History -->
+      <div id="purchase-history-section" class="content-section section-card">
+        <h2><i class="fas fa-receipt"></i> Purchase History</h2>
+        <div class="purchase-history-toolbar">
+          <input type="text" id="purchaseHistorySearch" placeholder="🔍 Search purchases...">
+        </div>
+        <div class="table-wrapper">
+          <table id="purchaseHistoryTable">
+            <thead>
+              <tr>
+                <th><i class="fas fa-hashtag"></i> Purchase ID</th>
+                <th><i class="fas fa-calendar-alt"></i> Date</th>
+                <th><i class="fas fa-box"></i> Item</th>
+                <th><i class="fas fa-sort-numeric-up"></i> Quantity</th>
+                <th><i class="fas fa-dollar-sign"></i> Unit Cost</th>
+                <th><i class="fas fa-money-bill"></i> Total Cost</th>
+                <th><i class="fas fa-truck"></i> Supplier</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PO001</td>
+                <td>2025-08-15</td>
+                <td>Tomatoes</td>
+                <td>15</td>
+                <td>$1.50</td>
+                <td>$22.50</td>
+                <td>Veggie Supplier A</td>
+              </tr>
+              <tr>
+                <td>PO002</td>
+                <td>2025-08-10</td>
+                <td>Cheese</td>
+                <td>10</td>
+                <td>$5.00</td>
+                <td>$50.00</td>
+                <td>Dairy Delights</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Modal for Add/Edit Inventory Item -->
+      <div id="inventoryItemModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="inventoryItemModalTitle"><i class="fas fa-plus-circle"></i> Add New Inventory Item</h2>
+          <form id="inventoryItemForm">
+            <input type="hidden" id="inventoryItemId">
+            <label for="itemName"><i class="fas fa-tag"></i> Item Name:</label>
+            <input type="text" id="itemName" required>
+            <label for="currentStock"><i class="fas fa-box"></i> Current Stock:</label>
+            <input type="number" id="currentStock" required>
+            <label for="unit"><i class="fas fa-ruler-combined"></i> Unit:</label>
+            <input type="text" id="unit" required>
+            <label for="minStock"><i class="fas fa-exclamation-triangle"></i> Minimum Stock:</label>
+            <input type="number" id="minStock" required>
+            <label for="supplier"><i class="fas fa-truck-loading"></i> Supplier:</label>
+            <input type="text" id="supplier" required>
+            <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Save Item</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for Updating Stock -->
+      <div id="updateStockModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2><i class="fas fa-sync-alt"></i> Update Stock for <span id="updateStockItemName"></span></h2>
+          <form id="updateStockForm">
+            <input type="hidden" id="updateStockItemId">
+            <label for="stockChange"><i class="fas fa-sort-numeric-up"></i> Stock Change (add/subtract):</label>
+            <input type="number" id="stockChange" required>
+            <button type="submit" id="saveStockUpdateBtn" class="btn-primary"><i class="fas fa-save"></i>
+              Update</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for Add/Edit Supplier -->
+      <div id="supplierModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="supplierModalTitle"><i class="fas fa-user-plus"></i> Add New Supplier</h2>
+          <form id="supplierForm">
+            <input type="hidden" id="supplierId">
+            <label for="supplierName"><i class="fas fa-building"></i> Supplier Name:</label>
+            <input type="text" id="supplierName" required>
+            <label for="contactPerson"><i class="fas fa-user"></i> Contact Person:</label>
+            <input type="text" id="contactPerson" required>
+            <label for="supplierPhone"><i class="fas fa-phone"></i> Phone:</label>
+            <input type="text" id="supplierPhone" required>
+            <label for="supplierEmail"><i class="fas fa-envelope"></i> Email:</label>
+            <input type="email" id="supplierEmail" required>
+            <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Save Supplier</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!--------------------------- staff-management-section ------------------------------>
+
+    <!-- Staff Management Section -->
+    <div id="staff-management-section" class="content-section">
+      <h1><i class="fas fa-users-cog"></i> Staff Management</h1>
+
+      <!-- Toolbar for Staff Management -->
+      <div class="staff-toolbar">
+        <button id="addStaffBtn" class="btn-primary">
+          <i class="fas fa-user-plus"></i> Add Staff
+        </button>
+        <input type="text" id="staffSearch" placeholder="🔍 Search staff...">
+      </div>
+
+      <!-- Table to display staff -->
+      <div class="table-wrapper">
+        <table id="staffTable">
+          <thead>
+            <tr>
+              <th><i class="fas fa-id-badge"></i> ID</th>
+              <th><i class="fas fa-user"></i> Name</th>
+              <th><i class="fas fa-briefcase"></i> Role</th>
+              <th><i class="fas fa-sun"></i> Shift</th>
+              <th><i class="fas fa-calendar-alt"></i> Schedule</th>
+              <th><i class="fas fa-receipt"></i> Orders Handled</th>
+              <th><i class="fas fa-star"></i> Reviews</th>
+              <th><i class="fas fa-cogs"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Staff Example Row -->
+            <tr>
+              <td>1</td>
+              <td>Alex Chef</td>
+              <td><i class="fas fa-utensils"></i> Chef</td>
+              <td>Morning</td>
+              <td>8 AM - 4 PM</td>
+              <td>150</td>
+              <td>⭐⭐⭐⭐</td>
+              <td class="action-buttons">
+                <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-delete"><i class="fas fa-trash-alt"></i> Delete</button>
+                <button class="btn-assign-shift"><i class="fas fa-calendar-plus"></i> Assign Shift</button>
+                <button class="btn-view-performance"><i class="fas fa-chart-line"></i> View Performance</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Sara Waiter</td>
+              <td><i class="fas fa-concierge-bell"></i> Waiter</td>
+              <td>Evening</td>
+              <td>4 PM - 12 AM</td>
+              <td>200</td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td class="action-buttons">
+                <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-delete"><i class="fas fa-trash-alt"></i> Delete</button>
+                <button class="btn-assign-shift"><i class="fas fa-calendar-plus"></i> Assign Shift</button>
+                <button class="btn-view-performance"><i class="fas fa-chart-line"></i> View Performance</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal for Add/Edit Staff -->
+      <div id="staffModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="staffModalTitle"><i class="fas fa-user-edit"></i> Add Staff</h2>
+          <form id="staffForm">
+            <input type="hidden" id="staffId">
+            <label for="staffName"><i class="fas fa-user"></i> Name:</label>
+            <input type="text" id="staffName" required>
+            <label for="staffRole"><i class="fas fa-briefcase"></i> Role:</label>
+            <select id="staffRole">
+              <option value="chef">Chef</option>
+              <option value="waiter">Waiter</option>
+              <option value="delivery">Delivery</option>
+              <option value="manager">Manager</option>
+            </select>
+            <label for="staffShift"><i class="fas fa-sun"></i> Shift:</label>
+            <input type="text" id="staffShift" placeholder="e.g., Morning, Evening, Night">
+            <label for="staffSchedule"><i class="fas fa-calendar-alt"></i> Schedule:</label>
+            <input type="text" id="staffSchedule" placeholder="e.g., Mon-Fri, 9-5">
+            <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Save Staff</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for Assign Shift -->
+      <div id="assignShiftModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2><i class="fas fa-calendar-plus"></i> Assign Shift to <span id="assignShiftStaffName"></span></h2>
+          <input type="hidden" id="assignShiftStaffId">
+          <label for="newStaffShift"><i class="fas fa-clock"></i> New Shift:</label>
+          <input type="text" id="newStaffShift" placeholder="e.g., Morning, Evening, Night">
+          <label for="newStaffSchedule"><i class="fas fa-calendar-alt"></i> New Schedule:</label>
+          <input type="text" id="newStaffSchedule" placeholder="e.g., Mon-Fri, 9-5">
+          <button id="saveShiftAssignmentBtn" class="btn-primary"><i class="fas fa-check-circle"></i> Assign</button>
+        </div>
+      </div>
+
+      <!-- Modal for View Performance -->
+      <div id="performanceModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2><i class="fas fa-chart-line"></i> Performance of <span id="performanceStaffName"></span></h2>
+          <p><strong><i class="fas fa-receipt"></i> Orders Handled:</strong> <span id="performanceOrdersHandled"></span>
+          </p>
+          <p><strong><i class="fas fa-star"></i> Reviews:</strong> <span id="performanceReviews"></span></p>
+          <!-- More performance metrics can be added here -->
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--------------------------- payment-finance-section ------------------------------>
+    <div id="payment-finance-section" class="content-section">
+      <h1><i class="fas fa-money-check-alt"></i> Payment & Finance Management</h1>
+
+      <!-- Payment History -->
+      <div class="section-card">
+        <h3><i class="fas fa-history"></i> Payment History</h3>
+        <div class="payment-history-tabs">
+          <button class="tab-button active" data-type="cash"><i class="fas fa-coins"></i> Cash</button>
+          <button class="tab-button" data-type="card"><i class="fas fa-credit-card"></i> Card</button>
+          <button class="tab-button" data-type="online"><i class="fas fa-globe"></i> Online</button>
+          <button class="tab-button" data-type="paypal"><i class="fab fa-paypal"></i> PayPal</button>
+        </div>
+        <div id="payment-history-content">
+          <p><i class="fas fa-info-circle"></i> Select a payment type to view history.</p>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th><i class="fas fa-calendar"></i> Date</th>
+                  <th><i class="fas fa-receipt"></i> Transaction ID</th>
+                  <th><i class="fas fa-dollar-sign"></i> Amount</th>
+                  <th><i class="fas fa-credit-card"></i> Type</th>
+                  <th><i class="fas fa-flag"></i> Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2025-08-18</td>
+                  <td>TXN001</td>
+                  <td>$25.00</td>
+                  <td>Cash</td>
+                  <td><i class="fas fa-check-circle text-green"></i> Completed</td>
+                </tr>
+                <tr>
+                  <td>2025-08-17</td>
+                  <td>TXN002</td>
+                  <td>$50.00</td>
+                  <td>Card</td>
+                  <td><i class="fas fa-check-circle text-green"></i> Completed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Revenue Report -->
+      <div class="section-card">
+        <h3><i class="fas fa-chart-line"></i> Daily/Monthly Revenue Report</h3>
+        <div class="report-controls">
+          <label for="report-period"><i class="fas fa-calendar-alt"></i> Select Period:</label>
+          <select id="report-period">
+            <option value="daily">Daily</option>
+            <option value="monthly">Monthly</option>
+          </select>
+          <input type="date" id="report-date-daily" value="2025-08-19">
+          <input type="month" id="report-date-monthly" value="2025-08" style="display: none;">
+          <button id="generate-report-btn"><i class="fas fa-sync"></i> Generate Report</button>
+        </div>
+        <div id="revenue-report-content">
+          <p><i class="fas fa-info-circle"></i> Select a period and click "Generate Report".</p>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Date/Month</th>
+                  <th>Total Revenue</th>
+                  <th>Cash Sales</th>
+                  <th>Card Sales</th>
+                  <th>Online Sales</th>
+                  <th>PayPal Sales</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2025-08-19</td>
+                  <td>$1500.00</td>
+                  <td>$500.00</td>
+                  <td>$700.00</td>
+                  <td>$200.00</td>
+                  <td>$100.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Refunds & Disputes -->
+      <div class="section-card">
+        <h3><i class="fas fa-exclamation-triangle"></i> Refunds & Disputes</h3>
+        <div class="refund-dispute-controls">
+          <input type="text" id="search-refund-dispute" placeholder="🔍 Search by Transaction ID or Customer">
+          <button id="add-dispute-btn"><i class="fas fa-plus-circle"></i> Add New Dispute</button>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Transaction ID</th>
+                <th>Customer</th>
+                <th>Amount</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025-08-15</td>
+                <td>TXN004</td>
+                <td>Alice Brown</td>
+                <td>$10.00</td>
+                <td>Incorrect order</td>
+                <td><i class="fas fa-clock text-yellow"></i> Pending</td>
+                <td><button class="btn-action"><i class="fas fa-check"></i> Resolve</button></td>
+              </tr>
+              <tr>
+                <td>2025-08-10</td>
+                <td>TXN005</td>
+                <td>Bob White</td>
+                <td>$20.00</td>
+                <td>Duplicate charge</td>
+                <td><i class="fas fa-check-circle text-green"></i> Resolved</td>
+                <td><button class="btn-action"><i class="fas fa-eye"></i> View Details</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tax Reports & Invoices -->
+      <div class="section-card">
+        <h3><i class="fas fa-file-invoice-dollar"></i> Tax Reports & Invoices</h3>
+        <div class="tax-invoice-controls">
+          <label for="tax-invoice-year"><i class="fas fa-calendar"></i> Select Year:</label>
+          <input type="number" id="tax-invoice-year" value="2025" min="2000" max="2099">
+          <button id="generate-tax-report-btn"><i class="fas fa-file-alt"></i> Generate Tax Report</button>
+          <button id="generate-invoice-btn"><i class="fas fa-file-invoice"></i> Generate New Invoice</button>
+        </div>
+        <div id="tax-invoice-content">
+          <p><i class="fas fa-info-circle"></i> Generate tax reports or create new invoices.</p>
+          <h4><i class="fas fa-list"></i> Recent Invoices</h4>
+          <div class="table-responsive">
+            <table class_="data-table">
+              <thead>
+                <tr>
+                  <th>Invoice ID</th>
+                  <th>Date</th>
+                  <th>Customer</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>INV001</td>
+                  <td>2025-08-01</td>
+                  <td>John Doe</td>
+                  <td>$120.00</td>
+                  <td><i class="fas fa-check-circle text-green"></i> Paid</td>
+                  <td><button class="btn-action"><i class="fas fa-download"></i> Download</button></td>
+                </tr>
+                <tr>
+                  <td>INV002</td>
+                  <td>2025-07-25</td>
+                  <td>Jane Smith</td>
+                  <td>$85.00</td>
+                  <td><i class="fas fa-check-circle text-green"></i> Paid</td>
+                  <td><button class="btn-action"><i class="fas fa-download"></i> Download</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--------------------------- "marketing-promotions-section ------------------------------>
+    <div id="marketing-promotions-section" class="content-section">
+      <h1><i class="fas fa-bullhorn"></i> Marketing & Promotions</h1>
+
+      <!-- Discounts & Coupons -->
+      <div class="section-card">
+        <h3><i class="fas fa-tags"></i> Manage Discounts & Coupons</h3>
+        <div class="controls">
+          <button id="add-discount-btn" class="btn-primary">
+            <i class="fas fa-plus-circle"></i> Add New Discount
+          </button>
+          <input type="text" id="discount-search" placeholder="🔍 Search discounts...">
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th><i class="fas fa-barcode"></i> Code</th>
+              <th><i class="fas fa-percent"></i> Type</th>
+              <th><i class="fas fa-dollar-sign"></i> Value</th>
+              <th><i class="fas fa-calendar-alt"></i> Expires</th>
+              <th><i class="fas fa-toggle-on"></i> Status</th>
+              <th><i class="fas fa-cogs"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fas fa-ticket-alt"></i> SAVE10</td>
+              <td><i class="fas fa-percentage"></i> Percentage</td>
+              <td><i class="fas fa-percentage"></i> 10%</td>
+              <td><i class="fas fa-calendar-day"></i> 2025-12-31</td>
+              <td><i class="fas fa-check-circle text-green"></i> Active</td>
+              <td>
+                <button class="btn-action"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-action"><i class="fas fa-trash-alt"></i> Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-ticket-alt"></i> FREEDELIVERY</td>
+              <td><i class="fas fa-shipping-fast"></i> Free Delivery</td>
+              <td><i class="fas fa-minus-circle"></i> N/A</td>
+              <td><i class="fas fa-calendar-day"></i> 2025-10-31</td>
+              <td><i class="fas fa-check-circle text-green"></i> Active</td>
+              <td>
+                <button class="btn-action"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-action"><i class="fas fa-trash-alt"></i> Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Happy Hours -->
+      <div class="section-card">
+        <h3><i class="fas fa-clock"></i> Happy Hours & Special Deals</h3>
+        <div class="controls">
+          <button id="add-deal-btn" class="btn-primary">
+            <i class="fas fa-plus-circle"></i> Add New Deal
+          </button>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th><i class="fas fa-gift"></i> Deal Name</th>
+              <th><i class="fas fa-info-circle"></i> Description</th>
+              <th><i class="fas fa-calendar-day"></i> Period</th>
+              <th><i class="fas fa-toggle-on"></i> Status</th>
+              <th><i class="fas fa-cogs"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fas fa-utensils"></i> Lunch Combo</td>
+              <td><i class="fas fa-hamburger"></i> Burger + Fries + Drink for $10</td>
+              <td><i class="fas fa-clock"></i> Mon-Fri, 12 PM - 3 PM</td>
+              <td><i class="fas fa-check-circle text-green"></i> Active</td>
+              <td>
+                <button class="btn-action"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-action"><i class="fas fa-trash-alt"></i> Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-pizza-slice"></i> Happy Hour Pizza</td>
+              <td><i class="fas fa-percentage"></i> 50% off all pizzas</td>
+              <td><i class="fas fa-clock"></i> Daily, 5 PM - 7 PM</td>
+              <td><i class="fas fa-check-circle text-green"></i> Active</td>
+              <td>
+                <button class="btn-action"><i class="fas fa-edit"></i> Edit</button>
+                <button class="btn-action"><i class="fas fa-trash-alt"></i> Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Campaigns -->
+      <div class="section-card">
+        <h3><i class="fas fa-envelope-open-text"></i> Email/SMS Campaigns & Push Notifications</h3>
+        <div class="controls">
+          <button id="create-campaign-btn" class="btn-primary">
+            <i class="fas fa-paper-plane"></i> Create New Campaign
+          </button>
+          <button id="send-notification-btn" class="btn-secondary">
+            <i class="fas fa-bell"></i> Send Push Notification
+          </button>
+        </div>
+        <h4><i class="fas fa-history"></i> Recent Campaigns</h4>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th><i class="fas fa-bullseye"></i> Campaign Name</th>
+              <th><i sanded="fas fa-list"></i> Type</th>
+              <th><i class="fas fa-calendar-alt"></i> Date Sent</th>
+              <th><i class="fas fa-info-circle"></i> Status</th>
+              <th><i class="fas fa-cogs"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><i class="fas fa-sun"></i> Summer Sale</td>
+              <td><i class="fas fa-envelope"></i> Email</td>
+              <td><i class="fas fa-calendar-day"></i> 2025-07-01</td>
+              <td><i class="fas fa-check-circle text-green"></i> Sent</td>
+              <td><button class="btn-action"><i class="fas fa-chart-bar"></i> View Report</button></td>
+            </tr>
+            <tr>
+              <td><i class="fas fa-concierge-bell"></i> New Menu Launch</td>
+              <td><i class="fas fa-sms"></i> SMS</td>
+              <td><i class="fas fa-calendar-day"></i> 2025-08-10</td>
+              <td><i class="fas fa-check-circle text-green"></i> Sent</td>
+              <td><button class="btn-action"><i class="fas fa-chart-bar"></i> View Report</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal for Add/Edit Discount -->
+      <div id="discountModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="discountModalTitle"><i class="fas fa-plus-circle"></i> Add New Discount</h2>
+          <form id="discountForm">
+            <input type="hidden" id="discountId">
+            <label for="discountCode"><i class="fas fa-barcode"></i> Discount Code:</label>
+            <input type="text" id="discountCode" required>
+            <label for="discountType"><i class="fas fa-percent"></i> Type:</label>
+            <select id="discountType">
+              <option value="percentage">Percentage</option>
+              <option value="fixed">Fixed Amount</option>
+              <option value="free_delivery">Free Delivery</option>
+            </select>
+            <label for="discountValue"><i class="fas fa-dollar-sign"></i> Value:</label>
+            <input type="text" id="discountValue" placeholder="e.g., 10% or $5" required>
+            <label for="discountExpires"><i class="fas fa-calendar-alt"></i> Expires:</label>
+            <input type="date" id="discountExpires">
+            <label for="discountStatus"><i class="fas fa-toggle-on"></i> Status:</label>
+            <select id="discountStatus">
+              <option value="Active">Active</option>
+              <option value="Expired">Expired</option>
+            </select>
+            <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Save Discount</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for Add/Edit Deal -->
+      <div id="dealModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="dealModalTitle"><i class="fas fa-plus-circle"></i> Add New Deal</h2>
+          <form id="dealForm">
+            <input type="hidden" id="dealId">
+            <label for="dealName"><i class="fas fa-gift"></i> Deal Name:</label>
+            <input type="text" id="dealName" required>
+            <label for="dealDescription"><i class="fas fa-info-circle"></i> Description:</label>
+            <textarea id="dealDescription" rows="3"></textarea>
+            <label for="dealPeriod"><i class="fas fa-calendar-day"></i> Period:</label>
+            <input type="text" id="dealPeriod" placeholder="e.g., Mon-Fri, 12 PM - 3 PM">
+            <label for="dealStatus"><i class="fas fa-toggle-on"></i> Status:</label>
+            <select id="dealStatus">
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+            <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Save Deal</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for Create Campaign -->
+      <div id="campaignModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="campaignModalTitle"><i class="fas fa-paper-plane"></i> Create New Campaign</h2>
+          <form id="campaignForm">
+            <input type="hidden" id="campaignId">
+            <label for="campaignName"><i class="fas fa-bullseye"></i> Campaign Name:</label>
+            <input type="text" id="campaignName" required>
+            <label for="campaignType"><i class="fas fa-list"></i> Type:</label>
+            <select id="campaignType">
+              <option value="Email">Email</option>
+              <option value="SMS">SMS</option>
+              <option value="Push Notification">Push Notification</option>
+            </select>
+            <label for="campaignContent"><i class="fas fa-file-alt"></i> Content:</label>
+            <textarea id="campaignContent" rows="5" required></textarea>
+            <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Create Campaign</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal for Send Push Notification -->
+      <div id="pushNotificationModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2><i class="fas fa-bell"></i> Send Push Notification</h2>
+          <form id="pushNotificationForm">
+            <label for="notificationTitle"><i class="fas fa-heading"></i> Title:</label>
+            <input type="text" id="notificationTitle" required>
+            <label for="notificationMessage"><i class="fas fa-comment-alt"></i> Message:</label>
+            <textarea id="notificationMessage" rows="3" required></textarea>
+            <button type="submit" class="btn-primary"><i class="fas fa-bell"></i> Send Notification</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--------------------------- feedback-review-section ------------------------------>
+
+    <div id="feedback-review-section" class="content-section">
+      <h1>💬 Feedback & Review Management</h1>
+
+      <!-- Customer Feedback -->
+      <div class="section-card">
+        <h3><i class="fas fa-comment-dots"></i> Customer Feedback</h3>
+        <div class="controls">
+          <input type="text" id="feedback-search" placeholder="🔍 Search feedback...">
+          <select id="feedback-type-filter">
+            <option value="all">📋 All Types</option>
+            <option value="order">🛒 Order Feedback</option>
+            <option value="reservation">📅 Reservation Feedback</option>
+          </select>
+          <select id="feedback-rating-filter">
+            <option value="all">⭐ All Ratings</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="1">⭐</option>
+          </select>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th><i class="fas fa-calendar-alt"></i> Date</th>
+              <th><i class="fas fa-user"></i> Customer</th>
+              <th><i class="fas fa-tag"></i> Type</th>
+              <th><i class="fas fa-receipt"></i> Reference ID</th>
+              <th><i class="fas fa-star"></i> Rating</th>
+              <th><i class="fas fa-comment"></i> Comment</th>
+              <th><i class="fas fa-cogs"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025-08-18</td>
+              <td>John Doe</td>
+              <td>Order</td>
+              <td>#ORD123</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>Loved the pizza!</td>
+              <td><button class="btn-action"><i class="fas fa-reply"></i> Respond</button></td>
+            </tr>
+            <tr>
+              <td>2025-08-17</td>
+              <td>Jane Smith</td>
+              <td>Reservation</td>
+              <td>#RES456</td>
+              <td>⭐⭐⭐</td>
+              <td>Service could be faster.</td>
+              <td><button class="btn-action"><i class="fas fa-reply"></i> Respond</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Complaint Management -->
+      <div class="section-card">
+        <h3><i class="fas fa-exclamation-circle"></i> Complaint Management</h3>
+        <div class="controls">
+          <input type="text" id="complaint-search" placeholder="🔍 Search complaints...">
+          <select id="complaint-status-filter">
+            <option value="all">📋 All Statuses</option>
+            <option value="pending">⏳ Pending</option>
+            <option value="resolved">✅ Resolved</option>
+          </select>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th><i class="fas fa-calendar-alt"></i> Date</th>
+              <th><i class="fas fa-user"></i> Customer</th>
+              <th><i class="fas fa-bullhorn"></i> Subject</th>
+              <th><i class="fas fa-info-circle"></i> Details</th>
+              <th><i class="fas fa-flag"></i> Status</th>
+              <th><i class="fas fa-cogs"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025-08-16</td>
+              <td>Alice Brown</td>
+              <td>Incorrect Order</td>
+              <td>Received wrong item.</td>
+              <td>⏳ Pending</td>
+              <td><button class="btn-action"><i class="fas fa-eye"></i> View/Respond</button></td>
+            </tr>
+            <tr>
+              <td>2025-08-15</td>
+              <td>Bob White</td>
+              <td>Late Delivery</td>
+              <td>Order arrived 30 mins late.</td>
+              <td>✅ Resolved</td>
+              <td><button class="btn-action"><i class="fas fa-eye"></i> View Details</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Rating Analysis -->
+      <div class="section-card">
+        <h3><i class="fas fa-chart-line"></i> Rating Analysis</h3>
+        <div class="rating-summary">
+          <h4><i class="fas fa-star-half-alt"></i> Overall Ratings</h4>
+          <p>🍽️ Food: <span id="food-rating">4.5</span> ⭐</p>
+          <p>🧑‍🤝‍🧑 Service: <span id="service-rating">4.0</span> ⭐</p>
+          <p>🚚 Delivery: <span id="delivery-rating">4.2</span> ⭐</p>
+        </div>
+        <div class="chart-container">
+          <canvas id="ratingDistributionChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------- report-analysis-section ------------------------------>
+
+    <div id="report-analysis-section" class="content-section">
+      <h1>📈 Report & Analysis</h1>
+
+      <!-- Sales Reports -->
+      <section class="report-card">
+        <h2>🍽 Sales Reports</h2>
+        <p>Overview of revenue generated by dishes and categories.</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Dish/Category</th>
+                <th>Units Sold</th>
+                <th>Total Sales</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pizza (Category)</td>
+                <td>320</td>
+                <td>$6,400</td>
+              </tr>
+              <tr>
+                <td>BBQ Chicken Pizza (Dish)</td>
+                <td>120</td>
+                <td>$2,400</td>
+              </tr>
+              <tr>
+                <td>Burgers (Category)</td>
+                <td>200</td>
+                <td>$3,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Customer Retention -->
+      <section class="report-card">
+        <h2>👥 Customer Retention</h2>
+        <p>Returning vs new customers (monthly trend).</p>
+        <ul>
+          <li>January: 65% returning, 35% new</li>
+          <li>February: 70% returning, 30% new</li>
+          <li>March: 60% returning, 40% new</li>
+        </ul>
+      </section>
+
+      <!-- Reservation Trends -->
+      <section class="report-card">
+        <h2>📅 Reservation Trends</h2>
+        <p>Popular days and peak hours for reservations.</p>
+        <ul>
+          <li>Most reservations on: Friday & Saturday</li>
+          <li>Peak hours: 7 PM – 9 PM</li>
+          <li>Average reservations per day: 45</li>
+        </ul>
+      </section>
+
+      <!-- Staff Performance -->
+      <section class="report-card">
+        <h2>🧑‍🍳 Staff Performance</h2>
+        <p>Efficiency and service quality reports.</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Staff Member</th>
+                <th>Role</th>
+                <th>Shifts Worked</th>
+                <th>Customer Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Doe</td>
+                <td>Waiter</td>
+                <td>22</td>
+                <td>4.7 / 5</td>
+              </tr>
+              <tr>
+                <td>Sarah Lee</td>
+                <td>Chef</td>
+                <td>18</td>
+                <td>4.9 / 5</td>
+              </tr>
+              <tr>
+                <td>Mike Brown</td>
+                <td>Bartender</td>
+                <td>20</td>
+                <td>4.5 / 5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+
+    <!--------------------------- setting-section ------------------------------>
+
+    <div id="setting-section" class="content-section">
+      <h1>⚙️ Settings</h1>
+
+      <!-- Restaurant Info -->
+      <section class="settings-card">
+        <h2>🏢 Restaurant Info</h2>
+        <form>
+          <label for="siteName">Restaurant Name:</label>
+          <input type="text" id="siteName" value="My Restaurant">
+
+          <label for="logoUpload">Logo:</label>
+          <input type="file" id="logoUpload" accept="image/*">
+
+          <label for="contact">Contact Details:</label>
+          <input type="text" id="contact" placeholder="+1 234 567 890">
+
+          <label for="workingHours">Working Hours:</label>
+          <input type="text" id="workingHours" placeholder="Mon-Sun: 10 AM - 10 PM">
+        </form>
+      </section>
+
+      <!-- Table Layout -->
+      <section class="settings-card">
+        <h2>🪑 Table Layout (Reservations)</h2>
+        <form>
+          <label for="totalTables">Total Tables:</label>
+          <input type="number" id="totalTables" value="20">
+
+          <label for="tableConfig">Layout Config:</label>
+          <textarea id="tableConfig" placeholder="E.g. 5 tables of 2 seats, 10 tables of 4 seats..."></textarea>
+        </form>
+      </section>
+
+      <!-- Delivery Settings -->
+      <section class="settings-card">
+        <h2>🚚 Delivery Settings</h2>
+        <form>
+          <label for="zones">Delivery Zones:</label>
+          <textarea id="zones" placeholder="Zone A, Zone B, Zone C"></textarea>
+
+          <label for="charges">Delivery Charges:</label>
+          <input type="text" id="charges" placeholder="$5 flat / free above $50">
+
+          <label for="deliveryTime">Delivery Timings:</label>
+          <input type="text" id="deliveryTime" placeholder="11 AM - 9 PM">
+        </form>
+      </section>
+
+      <!-- Notification Settings -->
+      <section class="settings-card">
+        <h2>🔔 Notification Settings</h2>
+        <form>
+          <label><input type="checkbox" checked> Email Notifications</label><br>
+          <label><input type="checkbox"> SMS Notifications</label>
+        </form>
+      </section>
+
+      <!-- Admin Account & Security -->
+      <section class="settings-card">
+        <h2>👤 Admin Account & Security</h2>
+        <form>
+          <label for="adminEmail">Admin Email:</label>
+          <input type="email" id="adminEmail" value="admin@restaurant.com">
+
+          <label for="changePassword">Change Password:</label>
+          <input type="password" id="changePassword" placeholder="Enter new password">
+
+          <label><input type="checkbox"> Two-Factor Authentication (2FA)</label>
+        </form>
+      </section>
+
+      <!-- Save Button -->
+      <div class="settings-save">
+        <button class="btn-primary">💾 Save Settings</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/admin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
