@@ -70,6 +70,8 @@ The dashboard helps to:
 - **Backend:** Node.js / Python / PHP (depending on implementation)
 - **Database:** MySQL / MongoDB / PostgreSQL
 
+<img width="1898" height="968" alt="Image" src="https://github.com/user-attachments/assets/01fe1cf7-30f0-43fa-a4bb-6e6fbf5bff83" />
+
 ---
 
 ## 📦 Installation
